@@ -17,7 +17,16 @@ public class MainClass {
 		Transaction tr = ss.beginTransaction();
 		
 		Employee e = new Employee();
-		System.out.println("appln is started...");
+		e.setEmp_Id(1011);
+		e.setName("Shubham Verma");
+		e.setMobile("7903153178");
+		e.setEmail("shubham@gmail.com");
+		e.setAddress("Pune");
+		ss.persist(e);
+		tr.commit();
+		ss.close();
+
+		System.out.println(e);
 	}
 
 }
